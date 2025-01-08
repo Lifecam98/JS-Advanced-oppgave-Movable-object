@@ -21,19 +21,15 @@ function moveBox (direction) {
 
     switch (direction) {
     case "up":
-        // box.style.top = (top - step) + "px";
         newTop = Math.max(0, top - step);
         break;
     case "down":
-        // box.style.top = (top + step) + "px";
         newTop = Math.min(windowHeight - boxHeight, top + step);
         break;
     case "left":
-        // box.style.left = (left - step) + "px";
         newLeft = Math.max(0, left - step);
         break;
     case "right":
-        // box.style.left = (left + step) + "px";
         newLeft = Math.min(windowWidth - boxWidth, left + step);
         break;
     default:
@@ -81,8 +77,6 @@ document.addEventListener('click', function(event) {
     const clickX = event.clientX;
     const clickY = event.clientY;
 
-    // box.style.left = (clickX - box.offsetWidth / 2) + "px";
-    // box.style.top = (clickY - box.offsetHeight / 2) + "px";
     const newLeft = Math.min(Math.max(0, clickX - box.offsetWidth / 2), window.innerWidth - box.offsetWidth);
     const newTop = Math.min(Math.max(0, clickY - box.offsetHeight / 2), window.innerHeight - box.offsetHeight);
 
