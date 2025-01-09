@@ -3,8 +3,7 @@ const buttons = {
     up: document.getElementById("upArrow"),
     down: document.getElementById("downArrow"),
     left: document.getElementById("leftArrow"),
-    right: document.getElementById("rightArrow")
-}
+    right: document.getElementById("rightArrow")};
 
 function moveBox (direction) {
     const step = 20;
