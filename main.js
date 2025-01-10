@@ -6,14 +6,6 @@ const buttons = {
     left: document.getElementById("leftArrow"),
     right: document.getElementById("rightArrow")};
 
-    
-    document.addEventListener('DOMContentLoaded', (event) => {
-    const box = document.getElementById("box");
-    const initialLeft = (window.innerWidth - box.offsetWidth) / 2;
-    const initialTop = (window.innerHeight - box.offsetHeight) / 2;
-    box.style.left = initialLeft + "px";
-    box.style.top = initialTop + "px";
-});
 
 function moveBox (direction) {
     const step = 20;
@@ -49,6 +41,13 @@ function moveBox (direction) {
     box.style.left = newLeft + "px";
 }
 
+document.addEventListener('DOMContentLoaded', (event) => {
+    const box = document.getElementById("box");
+    const initialLeft = (window.innerWidth - box.offsetWidth) / 2;
+    const initialTop = (window.innerHeight - box.offsetHeight) / 2;
+    box.style.left = initialLeft + "px";
+    box.style.top = initialTop + "px";
+});
 
 buttons.up.addEventListener('click', function() {
     moveBox('up');
