@@ -8,7 +8,7 @@ This project was made as my answer to my first JS Advanved task at KodeHode by J
 
 In this assignment, we will explore the practical side of JavaScript by creating a movable HTML element. The task is to enable the element to move freely around the browser window. The specifications are as follows:
 
-Users should be able to:
+Functionality:
 
 - Navigation with arrow keys: Implement the ability to move the element in four directions – up, down, left, and right – using the arrow keys.
 - Click to position: Allow the user to move the element directly by clicking anywhere on the page.
