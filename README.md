@@ -1,8 +1,4 @@
-This project was made as my answer to my first JS Advanved task at KodeHode by JobLoop.
-
-The
-
-# Frontend Mentor - Single price grid component solution
+# JS Advanced - Movable objects
 
 This project was made as my answer to my first JS Advanved task at KodeHode by JobLoop.
 
@@ -10,13 +6,19 @@ This project was made as my answer to my first JS Advanved task at KodeHode by J
 
 ### The challenge
 
-The task involves making a webpage with HTML, CSS and JavaScript. On this webpage there should be a box that can be moved to anywhere on the screen.
+In this assignment, we will explore the practical side of JavaScript by creating a movable HTML element. The task is to enable the element to move freely around the browser window. The specifications are as follows:
 
 Users should be able to:
 
-- Move the box around using arrow keys in all directions (up, down, left, right).
-- Move the box to anywhere on the screen by clicking the area the user wants to place the box.
-- Make sure all elements on the screen can not exceed the borders of the screen.
+- Navigation with arrow keys: Implement the ability to move the element in four directions – up, down, left, and right – using the arrow keys.
+- Click to position: Allow the user to move the element directly by clicking anywhere on the page.
+- Stay visible: Ensure that the element stays within the visible screen area.
+
+### Optional Challenge
+
+You can enhance your implementation with the following additions:
+
+- Implement collision detection or add obstacles for added complexity.
 
 ### Links
 
