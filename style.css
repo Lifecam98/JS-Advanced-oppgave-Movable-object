@@ -7,13 +7,16 @@
 body {
     background-color: #333;
     height: 100svh;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+    position: relative;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    width: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
     color: #333;
     text-shadow: -1px -1px 0 aquamarine,
                 1px -1px 0 aquamarine,

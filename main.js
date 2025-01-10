@@ -1,4 +1,5 @@
 const box = document.getElementById("box");
+const h1 = document.querySelector("h1");
 const buttons = {
     up: document.getElementById("upArrow"),
     down: document.getElementById("downArrow"),
@@ -71,7 +72,7 @@ document.addEventListener('keydown', function(event) {
 });
 
 document.addEventListener('click', function(event) {
-    if (event.target.tagname === 'button') return;
+    if (event.target.tagName === 'BUTTON' || box.contains(event.target)) return;
 
     const clickX = event.clientX;
     const clickY = event.clientY;
@@ -79,6 +80,22 @@ document.addEventListener('click', function(event) {
     const newLeft = Math.min(Math.max(0, clickX - box.offsetWidth / 2), window.innerWidth - box.offsetWidth);
     const newTop = Math.min(Math.max(0, clickY - box.offsetHeight / 2), window.innerHeight - box.offsetHeight);
 
-    box.style.left = newLeft + "px";
-    box.style.top = newTop + "px";
-})
+    const h1Rect = h1.getBoundingClientRect();
+
+    const boxRect = {
+        top: newTop,
+        left: newLeft,
+        right: newLeft + box.offsetWidth,
+        bottom: newTop + box.offsetHeight
+    };
+
+    const isOverlapping = !(boxRect.right < h1Rect.left || 
+                            boxRect.left > h1Rect.right || 
+                            boxRect.bottom < h1Rect.top || 
+                            boxRect.top > h1Rect.bottom);
+
+    if (!isOverlapping) {
+        box.style.left = newLeft + "px";
+        box.style.top = newTop + "px";
+    }
+});
