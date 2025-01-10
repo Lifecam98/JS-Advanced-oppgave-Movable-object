@@ -30,9 +30,6 @@ h1 {
     background-color: aquamarine;
     position: absolute;
     border-radius: 20px;
-    top: 30%;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .arrow-buttons {

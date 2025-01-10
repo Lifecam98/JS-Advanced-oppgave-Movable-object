@@ -6,6 +6,15 @@ const buttons = {
     left: document.getElementById("leftArrow"),
     right: document.getElementById("rightArrow")};
 
+    
+    document.addEventListener('DOMContentLoaded', (event) => {
+    const box = document.getElementById("box");
+    const initialLeft = (window.innerWidth - box.offsetWidth) / 2;
+    const initialTop = (window.innerHeight - box.offsetHeight) / 2;
+    box.style.left = initialLeft + "px";
+    box.style.top = initialTop + "px";
+});
+
 function moveBox (direction) {
     const step = 20;
     const boxStyle = window.getComputedStyle(box);
